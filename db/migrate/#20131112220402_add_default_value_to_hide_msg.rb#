@@ -1,0 +1,5 @@
+class AddDefaultValueToHideMsg < ActiveRecord::Migration
+  def change
+    change_column :
+  end
+end
