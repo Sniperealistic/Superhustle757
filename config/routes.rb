@@ -3,6 +3,10 @@ resources :page
   resources :users
   match '/register' => 'users#new'
 
+  resources :sessions, :only => [:new, :create, :destroy]
+  match 'login' => 'sessions#new'
+  match 'logout' => 'sessions#destroy'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

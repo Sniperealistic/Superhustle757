@@ -1,5 +1,14 @@
 <h1>Register</h1>
 
+<div>
+<% if flash[:status] == TRUE %>
+    <p><%= flash[:alert] %></p>
+<% elseif flash[:status] == FALSE %>
+  <% flash[:alert].each do |error| %>
+    <p> <%= error %> </p>
+  <% end %>
+</div>
+
 <%= form_for @user do |user| %>
 <div>
     <%= user.label(:first_name, "First Name") %>
@@ -23,5 +32,6 @@
   </div>
   <div>
     <%= submit_tag "Submit" %>
+    <%= submit_tag "Register" %>
   </div>
 <% end %>
