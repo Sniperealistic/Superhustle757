@@ -1,5 +1,6 @@
 SuperHustle757::Application.routes.draw do
-resources :page
+  resources :page
+
   resources :users
   match '/register' => 'users#new'
 
