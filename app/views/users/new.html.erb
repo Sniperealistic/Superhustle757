@@ -31,8 +31,11 @@
     <%= user.text_field :email %>
   </div>
   <div>
-<<<<<<< HEAD
-    <%= submit_tag "Submit" %>
+
     <%= submit_tag "Register" %>
+
+    <p1>If already registered, please click the login link. </p1>
+    <%= link_to "Log In", login_path %>
+
   </div>
 <% end %>
